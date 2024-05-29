@@ -7,24 +7,36 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput playerInput;
     private InputAction move;
-    private InputAction jump;
+    //private InputAction jump;
     [SerializeField] private float speed;
     private CharacterController characterController;
+    private Camera myCamera;
+    private Vector3 forward, right;
     // Start is called before the first frame update
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         move = playerInput.actions["Move"];
-        jump = playerInput.actions["Jump"];
+        //jump = playerInput.actions["Jump"];
         characterController = GetComponent<CharacterController>();
+        myCamera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+        forward = myCamera.transform.forward;
+        right = myCamera.transform.right;
+        //forward.y = 0;
+        forward = Vector3.ProjectOnPlane(forward,Vector3.up).normalized;
+        right = Vector3.ProjectOnPlane(right, Vector3.up).normalized;
+
         Vector2 movement = move.ReadValue<Vector2>();
+
+        Vector3 finalMovement = movement.x * right + movement.y * forward;
+        
         //characterController.Move(new Vector3(movement.x, 0, movement.y) * Time.deltaTime * speed);
-        characterController.SimpleMove(new Vector3(movement.x, 0, movement.y) * speed);
+        characterController.SimpleMove(finalMovement * speed);
     }
     void OnControllerColliderHit(ControllerColliderHit hit){
         Rigidbody rb = hit.collider.attachedRigidbody;
