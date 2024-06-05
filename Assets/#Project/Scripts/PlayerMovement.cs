@@ -9,9 +9,11 @@ public class PlayerMovement : MonoBehaviour
     private InputAction move;
     //private InputAction jump;
     [SerializeField] private float speed;
+    //[SerializeField] WalkingSounds walkingSounds;
     private CharacterController characterController;
     private Camera myCamera;
     private Vector3 forward, right;
+    public bool moving { get; private set;}
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,17 @@ public class PlayerMovement : MonoBehaviour
         right = Vector3.ProjectOnPlane(right, Vector3.up).normalized;
 
         Vector2 movement = move.ReadValue<Vector2>();
-
+        // Vector2 test = new Vector2(0,0);
+        // if (movement != test){
+        //     walkingSounds.PlayFootstep();
+        //     foreach (AudioSource source in GetComponentsInChildren<AudioSource>())
+        //     {
+        //         if(source.name == "Walking"){
+        //             source.PlayFootstep();
+        //         }
+        //     }
+        // }
+        moving = movement != Vector2.zero;
         Vector3 finalMovement = movement.x * right + movement.y * forward;
         
         //characterController.Move(new Vector3(movement.x, 0, movement.y) * Time.deltaTime * speed);

@@ -21,7 +21,12 @@ public class GameUI : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Token")){
             count++;
-            Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
+            //deparente le son pour le jouer et le detruire à la fin de sa durée
+            AudioSource audio = other.GetComponentInChildren<AudioSource>();
+            audio.Play();
+            audio.transform.parent = null;
+            Destroy(audio.gameObject, audio.clip.length);
             // if (onPickUp !=null){
             //     onPickUp.Invoke();
             // }
