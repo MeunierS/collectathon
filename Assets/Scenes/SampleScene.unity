@@ -3617,7 +3617,8 @@ AudioSource:
   m_GameObject: {fileID: 738999571}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5967583786523760989, guid: cff93f3580beeea439dd920b0e7ea00c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 724706e756ef3ce45880a7a0e9bc721f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4094,7 +4095,8 @@ AudioSource:
   m_GameObject: {fileID: 979735537}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6387902224660111305, guid: cff93f3580beeea439dd920b0e7ea00c,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4622,7 +4624,8 @@ AudioSource:
   m_GameObject: {fileID: 1083897065}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6387902224660111305, guid: cff93f3580beeea439dd920b0e7ea00c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: cf7b408cf18580549ab0eeb91d1e0e2b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6172,7 +6175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319894592}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24441116, y: -0.311827, z: 0.08335101, w: 0.914374}
+  m_LocalRotation: {x: 0.24441114, y: -0.311827, z: 0.08335101, w: 0.914374}
   m_LocalPosition: {x: 7.71, y: 10, z: -13.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6375,7 +6378,8 @@ AudioSource:
   m_GameObject: {fileID: 1354166813}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6387902224660111305, guid: cff93f3580beeea439dd920b0e7ea00c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2ff4f957aba6eb4468fd5482ca4eb6c0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -6705,7 +6709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470612163}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.02630286, y: 0.91717875, z: -0.06141095, w: -0.39283586}
+  m_LocalRotation: {x: -0.026302867, y: 0.91717875, z: -0.061410964, w: -0.39283586}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
